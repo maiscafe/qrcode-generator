@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    overflow: hidden;
+}
+body {
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #c21778 0%, #784BA0 50%, #a80d9b 100%);
+    background-size: 200% 200%;
+    animation: colors 10s ease infinite;
+}
+@keyframes colors {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50%{
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+.flex-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+.flex-box {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow:inset 0px 1px 4px 0px #ffffff;
+    background: #ffffff05;
+    padding: 20px;
+}
+.flex-box h1 {
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.flex-box p {
+    padding: -20px 10px;
+    font-size: 13px;
+    text-align: center;
+    color:  #ffffff;
+
+}
+#submitUrl{
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 26px;
+    border-radius: 12px;
+    border: rgb(207, 207, 207) solid 1px;
+    outline: none;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+#submitUrl::placeholder{
+    color: #ffffff79;
+}
+#btnSubmit {
+    background: transparent;
+    font: bold;
+    color: #ffffff;
+    box-shadow: inset 1px 1px 6px -3px #ffffff;
+    border-radius: 24px;
+    width: 180px;
+    height: 30px;
+    border: none;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+}
+#btnSubmit:hover {
+    background-color: #ff3caa46;
+    background-image: linear-gradient(225deg, #ff3caa41 0%, #784ba03a 50%, #2b85c500 100%);
+    box-shadow: none;
+}
+.input-container {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#url-span{
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 2em;
+}
+#span-error {
+    margin-top: 15px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qr Code Generator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        </style>
+</head>
+<body class="flex-container">
+    <section id="firstPage" class="flex-box">
+        <h1>Gerador de QR Code</h1>
+        <div class="input-container">
+            <input autocomplete="off" type="text" name="submit" id="submitUrl" placeholder="Insira o link aqui">
+            <input type="button" id="btnSubmit" value="Criar QR Code">
+        </div>
+        <span id="span-error" ></span>
+    </section>
+    <section id="secondPage" class="flex-box">
+        <img id ="searchApi" src="" alt="" srcset="">
+        <span id = "url-span"></span>
+
+    </section>
+</body>
+<script src="./script/qrcode-api.js"></script>
+<script src="./script/hidden.js"></script>
+</html>
