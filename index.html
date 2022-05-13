@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qr Code Generator</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./assets/image-qr-code.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
         </style>
@@ -14,17 +15,34 @@
     <section id="firstPage" class="flex-box">
         <h1>Gerador de QR Code</h1>
         <div class="input-container">
-            <input autocomplete="off" type="text" name="submit" id="submitUrl" placeholder="Insira o link aqui">
+            <input autocomplete="off" type="text" name="submit" id="submitUrl" placeholder="Insira o link aqui" autofocus>
             <input type="button" id="btnSubmit" value="Criar QR Code">
         </div>
         <span id="span-error" ></span>
     </section>
     <section id="secondPage" class="flex-box">
-        <img id ="searchApi" src="" alt="" srcset="">
         <span id = "url-span"></span>
+        <img id ="searchApi" src="" alt="" srcset="">
+        <a id="down-img" href="" download="qrcode" target="_self" >
+            <button id="downQr">Baixar QR Code</button>
+        </a>
+        <button id="again">Gerar outro QR Code</button>
 
     </section>
+    <section id="waitPage" class="flex-box">
+        <button class="loading"></button>
+        <p>
+            Estamos criando seu QR Code, aguarde um momento...
+        </p>
+
+    </section>
+    <footer id="img-social" class="flex-container" >
+            <a class="redes-sociais" href="https://github.com/maiscafe" target="_blank" > <img  src="./assets/github-logo.png" alt=""></a>
+            <a class="redes-sociais" href="https://www.linkedin.com/in/maiscafe/" target="_blank"> <img src="./assets/linkedin-logo.png" alt=""></a>
+    </footer>
+    <p id="create"> Criado por Adriano Jr (MaisCafe)</p>
 </body>
 <script src="./script/qrcode-api.js"></script>
 <script src="./script/hidden.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>

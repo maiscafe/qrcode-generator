@@ -1,3 +1,4 @@
+/* reset global */
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +6,14 @@
     font-family: 'Outfit', sans-serif;
     overflow: hidden;
 }
+
 body {
     background-color: #FF3CAC;
     background-image: linear-gradient(225deg, #c21778 0%, #784BA0 50%, #a80d9b 100%);
     background-size: 200% 200%;
     animation: colors 10s ease infinite;
 }
+/* background-animation */
 @keyframes colors {
   0% {
     background-position: 0% 50%
@@ -30,6 +33,7 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     
 }
 .flex-box {
@@ -42,7 +46,8 @@ body {
     border-radius: 30px;
     box-shadow:inset 0px 1px 4px 0px #ffffff;
     background: #ffffff05;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
+    margin: 30px;
 }
 .flex-box h1 {
     letter-spacing: 1px;
@@ -76,7 +81,8 @@ body {
 #submitUrl::placeholder{
     color: #ffffff79;
 }
-#btnSubmit {
+#btnSubmit, #downQr, #again {
+    cursor: pointer;
     background: transparent;
     font: bold;
     color: #ffffff;
@@ -88,11 +94,12 @@ body {
     margin-top: 10px;
     transition: 0.5s ease-in-out;
 }
-#btnSubmit:hover {
+#btnSubmit:hover, #downQr:hover, #again:hover {
     background-color: #ff3caa46;
     background-image: linear-gradient(225deg, #ff3caa41 0%, #784ba03a 50%, #2b85c500 100%);
     box-shadow: none;
 }
+
 .input-container {
     display: flex;
     width: 100%;
@@ -101,16 +108,75 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+/* Footer */
+#img-social {
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 50px;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 30px;
+    margin: 20px;
+}
+
+
+/* Loading Page */
+#waitPage {
+    display: flex;
+    color: white;
+}
+.loading {
+    background: transparent;
+	display: inline-block;
+	border: 4px solid rgba(255, 255, 255, 0.1);
+	border-left-color: white;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	animation: donut-spin 1.2s linear infinite;
+    margin-bottom: 15px;
+}
+@keyframes donut-spin {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+}
+
+/* DOM */
 #url-span{
-    margin-top: 20px;
     color: #ffffff;
     font-size: 12px;
     text-align: center;
-    line-height: 2em;
+    line-height: 1.5em;
+    margin-bottom: 10px;
 }
 #span-error {
     margin-top: 15px;
     color: #ffffff;
     font-size: 12px;
     text-align: center;
+}
+
+#searchApi {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
+#create {
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    font-weight: lighter;
+    bottom: 10px;
 }
