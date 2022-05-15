@@ -10,7 +10,6 @@
 * Experiência do Usuário.
 * Canvas.
 * API.
-* Canvas.
 * AJAX.
 * Código Limpo.
 * HTML Semântico.
