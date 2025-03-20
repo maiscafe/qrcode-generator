@@ -17,7 +17,7 @@ function showQrcode (userSearch){ /* Exibe o QR Code */
 
 function apiValidate (userSearch) { /* Verifica se a api está disponível */
     var api = new XMLHttpRequest();
-    api.open("GET", "https://api.qrserver.com/v1/create-qr-code/?data=" + userSearch);
+    api.open("GET", "https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=" + userSearch);
     api.send();
     return api;
 };
