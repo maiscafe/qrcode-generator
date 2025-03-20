@@ -50,7 +50,7 @@ Riley Bell */
 
     var image = new Image();
 image.crossOrigin = "google";
-image.src = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + userSearch;
+image.src = "https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=" + userSearch;
 var fileName = image.src.split(/(\\|\/)/g).pop();
 image.onload = function () {
     var canvas = document.createElement('canvas');
